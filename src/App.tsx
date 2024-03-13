@@ -1,4 +1,5 @@
 import "./App.css";
+import FruitFact from "./components/FruitFact";
 
 function App() {
   const buttonText = "Show me fruit facts";
@@ -14,9 +15,7 @@ function App() {
       <button>{buttonText}</button>
       {fruitFactsArray.map(({ name, fact }) => (
         <div key={name}>
-          <p>
-            {name}: {fact}
-          </p>
+          <FruitFact fruit={name} fact={fact} />
         </div>
       ))}
     </>
