@@ -17,13 +17,11 @@ function App() {
   return (
     <>
       <h2>Day 4 / Random Fruit Facts</h2>
-      <FruitFacts
-        ComponentWillDisplayFruitFacts={displayFruitFacts}
-        handleClick={updateText}
-      ></FruitFacts>
       {fruitFactsArray.map(({ name, fact }) => {
         <div>
-          {name}, {fact}
+          <p>
+            {name} {fact}
+          </p>
         </div>;
       })}
     </>
