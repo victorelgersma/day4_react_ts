@@ -21,8 +21,10 @@ function App() {
         ComponentWillDisplayFruitFacts={displayFruitFacts}
         handleClick={updateText}
       ></FruitFacts>
-      {fruitFactsArray.map(() => {
-        <div></div>;
+      {fruitFactsArray.map(({ name, fact }) => {
+        <div>
+          {name}, {fact}
+        </div>;
       })}
     </>
   );
