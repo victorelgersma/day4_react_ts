@@ -10,6 +10,7 @@ function App() {
   return (
     <>
       <h2>Day 4 / Random Fruit Facts</h2>
+      <button>Show me fruit facts</button>
       {fruitFactsArray.map(({ name, fact }) => (
         <div key={name}>
           <p>
