@@ -1,6 +1,7 @@
 import "./App.css";
 
 function App() {
+  const buttonText = "Show me fruit facts";
   const fruitFactsArray = [
     { name: "Banana", fact: "I am yellow in color" },
     { name: "Peach", fact: "I have fuzzy skin" },
@@ -10,7 +11,7 @@ function App() {
   return (
     <>
       <h2>Day 4 / Random Fruit Facts</h2>
-      <button>Show me fruit facts</button>
+      <button>{buttonText}</button>
       {fruitFactsArray.map(({ name, fact }) => (
         <div key={name}>
           <p>
