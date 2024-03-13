@@ -16,15 +16,19 @@ function App() {
     setButtonText("Fruit Facts are boring!");
   };
 
+  const buttonStyle = {
+    display: "block",
+  };
+
   return (
     <>
       <h2>Day 4 / Random Fruit Facts</h2>
-      <button onClick={handleClick}>{buttonText}</button>
+      <button style={buttonStyle} onClick={handleClick}>
+        {buttonText}
+      </button>
       {showFacts &&
         fruitFactsArray.map(({ name, fact }) => (
-          <div key={name}>
-            <FruitFact fruit={name} fact={fact} />
-          </div>
+          <FruitFact key={name} fruit={name} fact={fact} />
         ))}
     </>
   );
