@@ -1,13 +1,6 @@
-import { useState } from "react";
 import "./App.css";
-import FruitFacts from "./components/FruitFacts";
 
 function App() {
-  const [displayFruitFacts, setDisplayFruitFacts] = useState(false);
-  const updateText = () => {
-    setDisplayFruitFacts(false);
-  };
-
   const fruitFactsArray = [
     { name: "Banana", fact: "I am yellow in color" },
     { name: "Peach", fact: "I have fuzzy skin" },
@@ -17,13 +10,13 @@ function App() {
   return (
     <>
       <h2>Day 4 / Random Fruit Facts</h2>
-      {fruitFactsArray.map(({ name, fact }) => {
-        <div>
+      {fruitFactsArray.map(({ name, fact }) => (
+        <div key={name}>
           <p>
-            {name} {fact}
+            {name}: {fact}
           </p>
-        </div>;
-      })}
+        </div>
+      ))}
     </>
   );
 }
